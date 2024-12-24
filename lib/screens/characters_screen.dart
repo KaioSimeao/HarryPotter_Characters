@@ -54,7 +54,7 @@ class CharactersScreen extends StatelessWidget {
                 },
                 child: Container(
                   height: 100,
-                  color: const Color(0x28013F3F),
+                  color: MyColors.corCard,
                   margin: const EdgeInsets.all(8),
                   child: Row(
                     children: [
@@ -70,7 +70,11 @@ class CharactersScreen extends StatelessWidget {
                                 character.image!,
                               ),
                             )
-                          : const Icon(Icons.person),
+                          : const Icon(
+                              Icons.person,
+                              size: 80,
+                              color: MyColors.corTextos,
+                            ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [

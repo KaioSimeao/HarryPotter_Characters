@@ -28,7 +28,11 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Detalhes do Personagem'),
+        iconTheme: const IconThemeData(color: MyColors.corTextos),
+        title: const Text(
+          'Detalhes do Personagem',
+          style: TextStyle(color: MyColors.corTextos),
+        ),
       ),
       body: Consumer<CharactersProvider>(
         builder: (context, charactersProvider, _) {
