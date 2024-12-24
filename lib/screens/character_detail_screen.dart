@@ -1,3 +1,4 @@
+import 'package:avaliacao_2/constants/my_colors.dart';
 import 'package:avaliacao_2/providers/characters_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
