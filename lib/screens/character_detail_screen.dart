@@ -56,11 +56,24 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                     : const Icon(Icons.person, size: 100),
                 const SizedBox(height: 16),
                 Text('Nome: ${character.name}',
-                    style: const TextStyle(fontSize: 18)),
+                    style: const TextStyle(
+                        color: MyColors.corTextos, fontSize: 30)),
+                Text(
+                  character.patronus != null && character.patronus!.isNotEmpty
+                      ? 'Patrono: ${character.patronus}'
+                      : 'Patrono: Não identificado',
+                  style:
+                      const TextStyle(color: MyColors.corTextos, fontSize: 26),
+                ),
                 Text('Casa: ${character.house}',
-                    style: const TextStyle(fontSize: 16)),
+                    style: const TextStyle(
+                        color: MyColors.corTextos, fontSize: 26)),
+                Text('Ano de nascimento: ${character.yearOfBirth}',
+                    style: const TextStyle(
+                        color: MyColors.corTextos, fontSize: 26)),
                 Text('Ator: ${character.actor}',
-                    style: const TextStyle(fontSize: 16)),
+                    style: const TextStyle(
+                        color: MyColors.corTextos, fontSize: 26)),
               ],
             ),
           );
