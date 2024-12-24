@@ -79,12 +79,17 @@ class CharactersScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            character.name ?? 'Desconhecido',
+                            character.name != null && character.name!.isNotEmpty
+                                ? '${character.name}'
+                                : 'Não indetificada',
                             style: const TextStyle(
                                 color: MyColors.corTextos, fontSize: 30),
                           ),
                           Text(
-                            character.house ?? 'Sem casa',
+                            character.house != null &&
+                                    character.house!.isNotEmpty
+                                ? '${character.house}'
+                                : 'Casa não indetificada',
                             style: const TextStyle(
                                 color: MyColors.corTextos, fontSize: 20),
                           ),
