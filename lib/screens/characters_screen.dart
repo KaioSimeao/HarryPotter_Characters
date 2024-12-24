@@ -60,6 +60,8 @@ class CharactersScreen extends StatelessWidget {
                     children: [
                       character.image != null && character.image!.isNotEmpty
                           ? Container(
+                              width: 90,
+                              height: 90,
                               margin: const EdgeInsets.all(5),
                               decoration: BoxDecoration(
                                   border: Border.all(
@@ -68,6 +70,7 @@ class CharactersScreen extends StatelessWidget {
                               )),
                               child: Image.network(
                                 character.image!,
+                                fit: BoxFit.cover,
                               ),
                             )
                           : const Icon(
