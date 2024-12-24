@@ -75,7 +75,7 @@ class CharactersScreen extends StatelessWidget {
                             )
                           : const Icon(
                               Icons.person,
-                              size: 80,
+                              size: 100,
                               color: MyColors.corTextos,
                             ),
                       Column(
