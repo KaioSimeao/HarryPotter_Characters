@@ -52,7 +52,24 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 (character.image != null && character.image!.isNotEmpty)
-                    ? Image.network(character.image!)
+                    ? Container(
+                        decoration: BoxDecoration(boxShadow: [
+                          BoxShadow(
+                              color: Colors.black.withOpacity(1),
+                              blurRadius: 10,
+                              spreadRadius: 5,
+                              offset: const Offset(0, 4))
+                        ]),
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height / 2,
+                        child: Image.network(
+                          character.image!,
+                          color: character.alive == false
+                              ? Colors.grey.withOpacity(1)
+                              : null,
+                          colorBlendMode: BlendMode.color,
+                          fit: BoxFit.cover,
+                        ))
                     : const Icon(Icons.person, size: 100),
                 const SizedBox(height: 16),
                 Text('Nome: ${character.name}',
